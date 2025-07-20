@@ -101,7 +101,7 @@ function App() {
         <div className="NavContainer">
           <div className="NavLogo">
             <span className="LogoIcon">⚔️</span>
-            <span className="LogoText">MBL CHAMPIONSHIP</span>
+            <span className="LogoText">MBL CHAMPIONSHIP 2025</span>
           </div>
           
           {/* Menú hamburguesa para móvil */}

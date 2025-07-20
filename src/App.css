@@ -42,7 +42,7 @@ html, body {
   z-index: 1;
 }
 
-/* Navigation - RESPONSIVE CON HAMBURGUESA */
+/* Navigation - RESPONSIVE CON HAMBURGUESA Y AUTO-HIDE */
 .Navigation {
   position: fixed;
   top: 0;
@@ -53,6 +53,13 @@ html, body {
   border-bottom: 2px solid rgba(212, 175, 55, 0.3);
   z-index: 1000;
   padding: 1rem 0;
+  transition: transform 0.3s ease-in-out, padding 0.3s ease-in-out;
+  transform: translateY(0);
+}
+
+.Navigation.hidden {
+  transform: translateY(-100%);
+  padding: 0.5rem 0;
 }
 
 .NavContainer {
@@ -63,6 +70,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  transition: padding 0.3s ease-in-out;
 }
 
 .NavLogo {
@@ -84,6 +92,7 @@ html, body {
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+  transition: font-size 0.3s ease-in-out;
 }
 
 /* Menú hamburguesa */
@@ -1395,7 +1404,15 @@ html, body {
 
 /* RESPONSIVE MOBILE FIRST */
 @media (max-width: 768px) {
-  /* Navigation móvil */
+  /* Navigation móvil compacta */
+  .Navigation {
+    padding: 0.8rem 0;
+  }
+
+  .Navigation.hidden {
+    padding: 0.4rem 0;
+  }
+
   .HamburgerMenu {
     display: flex;
   }
@@ -1606,12 +1623,20 @@ html, body {
 }
 
 @media (max-width: 480px) {
+  .Navigation {
+    padding: 0.6rem 0;
+  }
+
+  .Navigation.hidden {
+    padding: 0.3rem 0;
+  }
+
   .NavContainer {
     padding: 0 1rem;
   }
-  
+
   .LogoText {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   
   .TitleLine1 {

@@ -85,6 +85,8 @@ function Stats() {
 function App() {
   const targetDate = new Date('2025-08-23T00:00:00');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isNavHidden, setIsNavHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -94,10 +96,36 @@ function App() {
     setIsMenuOpen(false);
   };
 
+  // Efecto para ocultar/mostrar navegación al hacer scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Ocultar navegación cuando scrolleas hacia arriba (después de 100px)
+      if (currentScrollY > 100) {
+        if (currentScrollY > lastScrollY) {
+          // Scrolling down - ocultar navegación
+          setIsNavHidden(true);
+        } else {
+          // Scrolling up - mostrar navegación
+          setIsNavHidden(false);
+        }
+      } else {
+        // En la parte superior - siempre mostrar
+        setIsNavHidden(false);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
   return (
     <div className="App">
       {/* Navigation */}
-      <nav className="Navigation">
+      <nav className={`Navigation ${isNavHidden ? 'hidden' : ''}`}>
         <div className="NavContainer">
           <div className="NavLogo">
             <span className="LogoIcon">⚔️</span>

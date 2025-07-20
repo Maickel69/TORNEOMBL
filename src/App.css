@@ -609,6 +609,79 @@ html, body {
   }
 }
 
+/* COUNTDOWN RESPONSIVE - MEJORAS PARA MÓVILES */
+@media (max-width: 768px) {
+  .Countdown {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+
+  .CountdownHeader {
+    margin-bottom: 1.5rem;
+  }
+
+  .Countdown h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .CountdownSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .TimeUnits {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+    max-width: 100%;
+  }
+
+  .TimeUnit {
+    padding: 1rem 0.5rem;
+    min-height: 80px;
+  }
+
+  .Value {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .Label {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Countdown {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .Countdown h2 {
+    font-size: 1.5rem;
+  }
+
+  .CountdownSubtitle {
+    font-size: 0.8rem;
+  }
+
+  .TimeUnits {
+    gap: 0.5rem;
+  }
+
+  .TimeUnit {
+    padding: 0.8rem 0.3rem;
+    min-height: 70px;
+  }
+
+  .Value {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .Label {
+    font-size: 0.6rem;
+  }
+}
+
 /* Prize Section - TROPHY COMO FONDO */
 .PrizeSection {
   padding: 3rem 2rem;

@@ -164,7 +164,14 @@ function App() {
               La batalla definitiva por la gloria y los premios más grandes del Perú
             </p>
             <div className="HeroButtons">
-              <button className="HeroButton Primary">REGISTRAR EQUIPO</button>
+              <a
+                href="https://wa.me/qr/SZNYECO5J4E4C1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="HeroButton Primary"
+              >
+                REGISTRAR EQUIPO
+              </a>
               <button className="HeroButton Secondary">VER REGLAMENTO</button>
             </div>
           </div>
@@ -263,7 +270,14 @@ function App() {
             <p className="CTASubtitle">
               Únete a la competencia más épica de Mobile Legends en Perú
             </p>
-            <button className="CTAButton">REGISTRAR AHORA</button>
+            <a
+              href="https://wa.me/qr/SZNYECO5J4E4C1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="CTAButton"
+            >
+              REGISTRAR AHORA
+            </a>
           </div>
         </section>
       </main>

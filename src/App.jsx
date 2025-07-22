@@ -165,7 +165,7 @@ function App() {
             </p>
             <div className="HeroButtons">
               <a
-                href="https://wa.me/qr/SZNYECO5J4E4C1"
+                href="https://wa.me/51987405994"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="HeroButton Primary"
@@ -271,7 +271,7 @@ function App() {
               Únete a la competencia más épica de Mobile Legends en Perú
             </p>
             <a
-              href="https://wa.me/qr/SZNYECO5J4E4C1"
+              href="https://wa.me/51987405994"
               target="_blank"
               rel="noopener noreferrer"
               className="CTAButton"
